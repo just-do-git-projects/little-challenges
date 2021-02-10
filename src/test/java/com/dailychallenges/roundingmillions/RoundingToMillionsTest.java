@@ -41,7 +41,7 @@ public class RoundingToMillionsTest {
 	
 	@ParameterizedTest
 	@MethodSource("objectArrayProvider")
-	public void test1(Argument argument) { 
+	public void testRoundMillionsForCities(Argument argument) { 
 		assertArrayEquals(argument.expected, RoundToMillions.millionsRounding(argument.paramActual));
 	}
 }
