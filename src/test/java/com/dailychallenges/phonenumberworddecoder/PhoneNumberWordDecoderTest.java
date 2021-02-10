@@ -13,18 +13,18 @@ public class PhoneNumberWordDecoderTest {
 	@ParameterizedTest
 	@CsvSource({"123-647-3937,123-647-EYES", "(325)444-8378,(325)444-TEST", "653-879-8447,653-TRY-THIS",
 		"435-224-7613,435-224-7613", "(333)668-3245,(33D)ONT-FAIL", "(025)445-6741,(025)445-6741"})
-	public void decodePhoneNumber(String expected, String actualParam) {
+	public void testDecodePhoneNumber(String expected, String actualParam) {
 		assertEquals(expected, PhoneNumberWordDecoder.textToNum(actualParam));
 	}
 	
 	@ParameterizedTest
 	@ValueSource(strings = {"", "  13x"})
-	public void errorDecodingPhoneNumber(String parameter) {
+	public void testErrorDecodingPhoneNumber(String parameter) {
 		Assertions.assertThrows(IllegalArgumentException.class, () -> PhoneNumberWordDecoder.textToNum(parameter));
 	}
 	
 	@Test
-	public void errorDecodingPhoneNumber() {
+	public void testErrorDecodingPhoneNumber() {
 		Assertions.assertThrows(IllegalArgumentException.class, () -> PhoneNumberWordDecoder.textToNum(null));
 	}
 }
