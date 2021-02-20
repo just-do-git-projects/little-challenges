@@ -11,7 +11,7 @@ public class BasicPigLatinTest {
 	@CsvSource({"'Atscay areway reatgay etspay.','Cats are great pets.'",
 		"'Omtay otgay away mallsay iecepay ofway iepay.','Tom got a small piece of pie.'",
 		"'Ehay oldtay usway away eryvay excitingway aletay.','He told us a very exciting tale.'",
-		"'Away iamondday isway otnay enoughway.','A diamond is not enough.'",
+		"'Away Iamondday isway otnay enoughway.','A Diamond is not enough.'",
 		"'Urryhay!', 'Hurry!'"
 		})
 	public void test1(String expected, String actualParam) {
